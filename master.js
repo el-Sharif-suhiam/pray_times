@@ -147,7 +147,7 @@ let btn = document.getElementById("btn");
     //********************************************************************************************************
     function prayTime(day, month, year, location) {
       fetch(
-        `http://api.aladhan.com/v1/timings/${day}-${month}-${year}?${location}&method=1`
+        `https://api.aladhan.com/v1/timings/${day}-${month}-${year}?${location}&method=1`
       )
         .then((myData) => myData.json())
         .then((myData) => prayTiming(myData));
@@ -167,7 +167,7 @@ let btn = document.getElementById("btn");
 
     function prayTime_2(day, month, year, location) {
       fetch(
-        `http://api.aladhan.com/v1/timingsByCity?date=${day}-${month}-${year}&${location}&method=1`
+        `https://api.aladhan.com/v1/timingsByCity?date=${day}-${month}-${year}&${location}&method=1`
       )
         .then((myData) => myData.json())
         .then((myData) => {
