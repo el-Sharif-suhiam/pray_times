@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        direction: rtl;
+        height: 100vh;
+        background-color: #455a64;
+        /*  */
+      }
+      header {
+        position: relative;
+        text-align: center;
+        margin: 70px 5px 40px;
+        padding: 10px;
+        border-bottom: 8px double #eee;
+        color: #ffcc80;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      header::before {
+        content: "";
+        background-image: url("Ramadan_\(102\).jpg");
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-size: cover;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      header p {
+        font-size: 24px;
+      }
+      header button {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: white;
+        background-color: #689f39;
+        border: none;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0px 4px 5px 0px #777;
+        margin: 30px 0 10px;
+        cursor: pointer;
+      }
+      #city {
+        background: #555;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 10px;
+        width: fit-content;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      #btn {
+        margin-top: 20px;
+      }
+      .box {
+        margin: 10px;
+        padding: 20px;
+      }
+      h2 {
+        color: #ffcc80;
+        text-align: center;
+        padding: 10px;
+      }
+      .date {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        background-color: #689f39;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      .pray-time {
+        margin-top: 20px;
+      }
+      .pray-time div {
+        display: flex;
+        justify-content: space-between;
+        background-color: #eee;
+        padding: 15px 20px;
+        margin: 10px auto;
+        border-left: 1px solid #bbb;
+        border-radius: 20px;
+      }
+      @media (min-width: 768px) {
+        .pray-time {
+          display: flex;
+          justify-content: space-evenly;
+        }
+        .pray-time div {
+          margin: 5px;
+          padding: 15px 20px;
+          width: calc(100% / 6);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>مواقيت الصلاة</h1>
+        <p>موقع لأظهار مواقيت الصلاة حسب موقعك الحالي</p>
+        <select name="" id="city">
+          <option value="Brega">البريقة</option>
+          <option value="Benghazi">بنغازي</option>
+          <option value="Tripoli">طرابلس</option>
+          <option value="Cario">القاهرة</option>
+          <option value="Tunisia">تونس</option>
+          <option value="Damascus">دمشق</option>
+          <!-- <option value="Jablah">جبلة</option> -->
+          <option value="Amman">عمان</option>
+          <option value="Riyadh">الرياض</option>
+          <option value="Baghdad">بغداد</option>
+          <option value="Jerusalem">القدس</option>
+          <option value="Mecca">مكة</option>
+        </select>
+        <button id="city-btn">الوقت حسب المدينة</button>
+        <p>او</p>
+        <button id="btn">حسب موقعك الحالي</button>
+      </header>
+      <div id="container"></div>
+    </main>
+  </body>
+  <script src="master.js">
+  </script>
+</html>
