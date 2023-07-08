@@ -112,10 +112,10 @@ let btn = document.getElementById("btn");
           optionCity = "country=ٍSyria&city=Damascus";
           arbicCityName = "دمشق";
           break;
-        // case "Jablah":
-        //   optionCity = "country=Syria&city=Jablah";
-        //   arbicCityName = "جبلة"
-        //   break;
+        case "Jablah":
+           optionCity = "country=Syria&city=Jablah";
+           arbicCityName = "جبلة"
+          break;
         case "Amman":
           optionCity = "country=Jordan&city=Amman";
           arbicCityName = "عمان";
